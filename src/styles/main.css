@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Lato:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.theme01 {
+  --bg-color: #f7fafc;
+  --text-color: #2d3748;
+}
+
+.theme02 {
+  --bg-color: #1a202c;
+  --text-color: #edf2f7;
+}
+
+.theme03 {
+  --bg-color: #f9c74f;
+  --text-color: #2d2d2d;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+@layer components {
+  .btn {
+    @apply font-montserrat 
+    border-2 
+    border-transparent 
+    rounded-md 
+    py-1 
+    px-2.5 
+    bg-primary-color 
+    text-lg
+    text-secundary-color 
+    hover:bg-secundary-color 
+    hover:text-white 
+    hover:border-primary-color 
+    transition-all 
+    duration-300;
+  }
+  .btn-secundary {
+    @apply 
+    font-montserrat 
+    border-2 
+    border-primary-color 
+    rounded-md 
+    py-1 
+    px-2.5 
+    bg-transparent 
+    text-lg
+    text-light-color 
+    hover:bg-primary-color
+    hover:text-secundary-color
+    hover:border-transparent /* Cambia el borde en hover */
+    transition-all 
+    duration-300 
+  }
+}
