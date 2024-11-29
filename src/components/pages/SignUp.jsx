@@ -13,7 +13,7 @@ const SignUp = () => {
             alt="Logo"
             className="mx-auto mb-2 w-32 h-32"
           />
-          <h2 className="text-3xl font-bold text-cyan-200">Guimarbot</h2>
+          <h2 className="text-3xl font-bold text-cyan-200">LogicCraft</h2>
         </div>
 
         {/* Formulario Sección */}
