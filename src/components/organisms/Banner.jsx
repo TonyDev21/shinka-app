@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -16,7 +17,7 @@ const Banner = () => {
       </video>
 
       {/* Contenedor del contenido */}
-      <div className="relative z-10 text-center max-w-[800px] p-8 bg-black bg-opacity-70 rounded-lg">
+      <div className="relative z-10 text-center max-w-[800px] p-12 bg-black bg-opacity-80 rounded-lg">
         <h1 className="font-montserrat font-bold text-light-color mb-8 text-5xl">
           LogicCraft
         </h1>
@@ -26,7 +27,7 @@ const Banner = () => {
           cero. No necesitas experiencia previa, solo la curiosidad de explorar
           el mundo del código.
         </p>
-        <button className="btn text-xl">Comienza tu viaje</button>
+        <Link to="" className="btn text-xl py-4">Comienza tu viaje</Link>
       </div>
     </div>
   );

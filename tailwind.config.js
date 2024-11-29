@@ -26,14 +26,14 @@ export default {
         
           'primary-color' : '#44d62c',
           'secundary-color' : '#000000',
-          'btn-color-primary' : '#ffd700',
-          'btn-color-secondary':'#f45d48',
+          'dark-color' : '#111111',
+          'dark-light':'#252525',
           'light-color':'#f0f4f8',
-          'extra-color':'#74c0fc',
+          'extra-color':'#a3f296',
       },
       backgroundImage:{
         'banner-home' : "url('https://raw.githubusercontent.com/Eduardoaguic/fondos.idk/main/imagen/c633c20ede82f0e0ced7d570dbe3a1f3.gif')",
-        'banner-curso': "url('https://res.cloudinary.com/dxnx6awui/image/upload/v1728301083/vlzoggbev4dgzvrpjpzu.jpg')",
+        'banner-curso': "url('https://github.com/Eduardoaguic/fondos.idk/blob/main/kyrby.gif?raw=true')",
         'banner-beca': "url('https://res.cloudinary.com/dxnx6awui/image/upload/v1728428608/banner-beca_qcy4tz.png')",
         'banner-js': "url('https://res.cloudinary.com/dxnx6awui/image/upload/v1730265388/bannerJS_suetv9.svg')"
       }

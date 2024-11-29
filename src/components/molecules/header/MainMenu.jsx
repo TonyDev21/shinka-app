@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import BurgerButton from "../../atoms/BurgerButtom";
 
 const MainMenu = ({ isMenuOpen, toggleMenu }) => {
+
+  {/* Cierra el BurgerMenu */}
   const handleLinkClick = () => {
     toggleMenu();
   };
 
   return (
     <nav className="z-50">
+
       <BurgerButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
 
       <ul
@@ -43,13 +46,13 @@ const MainMenu = ({ isMenuOpen, toggleMenu }) => {
           </Link>
         </li>
         <li className="mb-7 lg:mb-0">
-          <Link to="/iniciar-sesion" className="btn" onClick={handleLinkClick}>
+          <Link to="/login" className="btn" onClick={handleLinkClick}>
             Iniciar Sesión
           </Link>
         </li>
         <li className="mb-7 lg:mb-0">
           <Link
-            to="/registrarme"
+            to="/signup"
             className="btn-secundary"
             onClick={handleLinkClick}
           >

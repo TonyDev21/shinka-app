@@ -4,8 +4,18 @@ import Error404 from "../pages/Error404"
 import Home from "../pages/Home"
 import Cursos from "../pages/Cursos"
 import Planes from "../pages/Planes"
+import Login from "../pages/Login"
+import SignUp from "../pages/SignUp"
 
 const router = createBrowserRouter([
+    {
+        path: "/login",
+        element: <Login />
+    },
+    {
+        path: "/signup",
+        element: <SignUp />
+    },
     {
         path: "/",
         element: <App/>,

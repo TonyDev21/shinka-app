@@ -3,6 +3,8 @@ import Logo from "../molecules/header/Logo";
 import MainMenu from "../molecules/header/MainMenu";
 
 const MainHeader = ({ Children }) => {
+
+  {/* Maneja el estado del Burguer */}
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
