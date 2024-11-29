@@ -8,14 +8,7 @@ import Login from "../pages/Login"
 import SignUp from "../pages/SignUp"
 
 const router = createBrowserRouter([
-    {
-        path: "/login",
-        element: <Login />
-    },
-    {
-        path: "/signup",
-        element: <SignUp />
-    },
+    
     {
         path: "/",
         element: <App/>,
@@ -36,9 +29,18 @@ const router = createBrowserRouter([
             {
                 path: "planes",
                 element:<Planes/>
-            }
+            },
+            {
+                path: "/login",
+                element: <Login />
+            },
+            {
+                path: "/signup",
+                element: <SignUp />
+            },
         ]
-    }
+    },
+    
 ])
 
 export default router

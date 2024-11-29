@@ -19,7 +19,9 @@ const MainHeader = ({ Children }) => {
           <MainMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         </nav>
       </header>
-      <main>{Children}</main>
+      <main>
+        {Children}
+      </main>
     </>
   );
 };

@@ -66,7 +66,7 @@ return (
               Soporte en menos de 24 horas
           </p>
           <button className={`w-full flex items-center mt-auto ${selectedStyle.buttonText} ${selectedStyle.buttonBg} font-bold border-0 py-2 px-4 focus:outline-none ${selectedStyle.hoverBG} ${selectedStyle.hoverText} rounded transition duration-400`}>
-              Comprar
+              Suscribirse
               <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
