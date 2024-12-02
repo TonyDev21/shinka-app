@@ -4,25 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.theme01 {
-  --bg-color: #f7fafc;
-  --text-color: #2d3748;
-}
-
-.theme02 {
-  --bg-color: #1a202c;
-  --text-color: #edf2f7;
-}
-
-.theme03 {
-  --bg-color: #f9c74f;
-  --text-color: #2d2d2d;
-}
-
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
 
 @layer components {
   .btn {
