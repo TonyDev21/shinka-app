@@ -1,25 +1,64 @@
+
+import { useAuth } from "../../context/AuthProvider";
+import { API_URL } from "../../constants/env";
+import { Link, Navigate, useLocation } from "react-router-dom";
+import { useState } from "react";
 import imgLogo from '../../assets/logo_color_white.svg';
-import { Link } from 'react-router-dom';
 
 const Login = () => {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const auth = useAuth();
+  const location = useLocation();
+  const from = location.state?.from || "/dashboard";
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(`${API_URL}/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+
+      if (response.ok) {
+        const json = await response.json();
+        if (json.body.accessToken && json.body.refreshToken) {
+          auth.saveUser(json);
+        }
+      } else {
+        const json = await response.json();
+        return json;
+      }
+    } catch (error) {
+      console.log("Fetch error:", error);
+    }
+  }
+
+  if (auth.isAuthenticated) {
+    return <Navigate to={from} />;
+  }
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-dark-color text-white">
       <div className="bg-dark-light p-8 rounded-xl backdrop-blur-sm shadow-lg shadow-cyan-200/10 w-[90%] max-w-4xl transition-transform duration-300 ease-in-out  flex">
-        
         {/* Imagen Sección */}
         <div className="hidden sm:flex flex-col justify-center items-center flex-1 text-center mb-6 ">
-          <img
-            src={imgLogo}
-            alt="Logo"
-            className="mx-auto mb-2 w-32 h-32"
-          />
+          <img src={imgLogo} alt="Logo"className="mx-auto mb-2 w-32 h-32"/>
           <h2 className="text-3xl font-bold text-cyan-200">LogicCraft</h2>
         </div>
 
         {/* Formulario Sección */}
         <div className="flex-1 ">
           <h1 className="text-3xl font-semibold text-center mb-6 text-primary-color">Iniciar Sesión</h1>
-          <form id="login-form">
+          <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="email" className="block text-sm font-medium">Correo Electrónico</label>
               <input
@@ -29,6 +68,8 @@ const Login = () => {
                 placeholder="Ingresa tu correo"
                 required
                 className="w-full p-3 mt-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-color"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
 
@@ -41,6 +82,8 @@ const Login = () => {
                 placeholder="Ingresa tu contraseña"
                 required
                 className="w-full p-3 mt-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-color"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
 
