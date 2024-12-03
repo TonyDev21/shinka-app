@@ -52,7 +52,7 @@ const MainHeader = ({ Children }) => {
           <MainMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         </nav>
       </header>
-      <main className="mb-20">
+      <main className="mb-16">
         {Children}
       </main>
     </>
