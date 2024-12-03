@@ -86,7 +86,6 @@ const router = createBrowserRouter([
               path: "tematica",
               element: <Tematica/>
             },
-            // Agrega aquí otras rutas protegidas
           ]
         }
       ]

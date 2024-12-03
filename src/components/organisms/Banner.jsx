@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="relative w-full min-h-[92vh] flex items-center justify-center overflow-hidden">
+    <div className="relative w-full min-h-[93vh] flex items-center justify-center overflow-hidden">
       {/* Video de fondo */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
