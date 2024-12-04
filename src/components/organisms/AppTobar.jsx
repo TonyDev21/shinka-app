@@ -17,7 +17,7 @@ const AppTopbar = ({ onToggleSidebar }) => {
             {/* Menu Button (Always visible) */}
             <button
                 type="button"
-                className="inline-flex justify-center items-center w-12 h-12 rounded-full cursor-pointer hover:bg-surface-hover hover:text-text-color transition-colors sm:order-2 order-1"
+                className="inline-flex justify-center items-center w-12 h-12 rounded-full cursor-pointer  hover:text-theme-primary transition-colors sm:order-2 order-1"
                 onClick={onToggleSidebar}
             >
                 <FaBars className="text-xl" />
@@ -44,13 +44,13 @@ const AppTopbar = ({ onToggleSidebar }) => {
 
             {/* Topbar Menu (Visible on large screens, hidden on small screens) */}
             <div className="hidden sm:flex ml-auto p-0 list-none gap-x-6 order-4 sm:order-3 font-montserrat">
-                <Link to="/" className="inline-flex justify-center items-center cursor-pointer hover:bg-surface-hover hover:text-text-color transition-colors">
+                <Link to="/" className="inline-flex justify-center items-center cursor-pointer hover:bg-surface-hover hover:text-theme-primary transition-colors">
                     Planes
                 </Link>
-                <Link to="/" className="font-normal text-text-color hover:text-btn-color-primary transition duration-200 flex items-center">
+                <Link to="/" className="font-normal text-text-color hover:text-theme-primary transition duration-200 flex items-center">
                     <FaShoppingCart className="mr-1" /> <span>({state.cart.length})</span>
                 </Link>
-                <Link to="/perfil" className="inline-flex justify-center items-center cursor-pointer hover:bg-surface-hover hover:text-text-color transition-colors">
+                <Link to="/perfil" className="inline-flex justify-center items-center cursor-pointer hover:bg-surface-hover hover:text-theme-primary transition-colors">
                        Perfil  
                 </Link>
             </div>
@@ -59,17 +59,17 @@ const AppTopbar = ({ onToggleSidebar }) => {
             <div className={`absolute top-full right-0 w-48 bg-surface-overlay shadow-lg p-4 rounded-lg ${menuVisible ? 'block' : 'hidden'} sm:hidden`}>
                 <ul className="flex flex-col gap-4">
                     <li>
-                        <Link className="flex items-center gap-2">
+                        <Link className="flex items-center gap-2 text-theme-text hover:text-theme-primary font-montserrat transition duration-200">
                             Planes
                         </Link>
                     </li>
                     <li>
-                        <Link to="/" className='font-montserrat font-normal text-dark-color hover:text-btn-color-primary transition duration-200 flex items-center'>
+                        <Link to="/" className='font-montserrat font-normal text-theme-text hover:text-theme-primary transition duration-200 flex items-center'>
                             <FaShoppingCart className="mr-1" /><span>({state.cart.length})</span>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/" className="flex items-center gap-2">
+                        <Link to="/" className="flex items-center gap-2 text-theme-text hover:text-theme-primary font-montserrat transition duration-200">
                                 Perfil
                         </Link>
                     </li>

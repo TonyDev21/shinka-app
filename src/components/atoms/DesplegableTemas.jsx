@@ -18,7 +18,7 @@ const DesplegableTemas = () => {
     <div className="relative inline-block text-left w-60">
       <button
         onClick={toggleDropdown}
-        className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-white  bg-secundary-color border border-extra-color rounded-md  transition duration-300"
+        className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-white  bg-secundary-color border border-primary-color rounded-md  transition duration-300"
       >
         {selectedOption}
         <FaChevronDown className="ml-2" />
@@ -31,31 +31,31 @@ const DesplegableTemas = () => {
             <ul className="space-y-1 ">
               <li 
                 onClick={() => handleOptionClick("Desarrollo Web")} 
-                className="px-4 py-2 hover:bg-extra-color hover:text-secundary-color cursor-pointer"
+                className="px-4 py-2 hover:bg-primary-color hover:text-secundary-color cursor-pointer"
               >
                 Desarrollo Web
               </li>
               <li 
                 onClick={() => handleOptionClick("Robótica")} 
-                className="px-4 py-2 hover:bg-extra-color hover:text-secundary-color cursor-pointer"
+                className="px-4 py-2 hover:bg-primary-color hover:text-secundary-color cursor-pointer"
               >
                 Robótica
               </li>
               <li 
                 onClick={() => handleOptionClick("Marketing")} 
-                className="px-4 py-2 hover:bg-extra-color hover:text-secundary-color cursor-pointer"
+                className="px-4 py-2 hover:bg-primary-color hover:text-secundary-color cursor-pointer"
               >
                 Marketing
               </li>
               <li 
                 onClick={() => handleOptionClick("Rutas de Aprendizaje")} 
-                className="px-4 py-2 hover:bg-extra-color hover:text-secundary-color cursor-pointer"
+                className="px-4 py-2 hover:bg-primary-color hover:text-secundary-color cursor-pointer"
               >
                 Rutas de Aprendizaje
               </li>
               <li 
                 onClick={() => handleOptionClick("Todas las áreas")} 
-                className="px-4 py-2 hover:bg-extra-color hover:text-secundary-color cursor-pointer"
+                className="px-4 py-2 hover:bg-primary-color hover:text-secundary-color cursor-pointer"
               >
                 Todas las áreas
               </li>
