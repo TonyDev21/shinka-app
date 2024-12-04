@@ -10,7 +10,7 @@ const Home = () => {
       <Banner/>
       <CreateApp/>
       <WhyShinka/>
-      <ContentPlans title="Forma parte de LogicCraft"/>
+      <ContentPlans title="Forma parte de CodexFlow"/>
     </section>
   )
 }
