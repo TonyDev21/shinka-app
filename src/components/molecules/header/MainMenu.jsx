@@ -53,7 +53,7 @@ const MainMenu = ({ isMenuOpen, toggleMenu }) => {
         <li className="mb-7 lg:mb-0">
           <Link
             to="/signup"
-            className="btn-secundary"
+            className="btn-secundary hover:bg-dark-color hover:text-primary-color"
             onClick={handleLinkClick}
           >
             Regístrate

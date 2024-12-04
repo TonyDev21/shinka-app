@@ -8,8 +8,8 @@ const CardPlan = ({planType, type, price,numStudent , saving }) => {
       buttonBg: 'bg-primary-color',
       buttonText: 'text-secundary-color',
       borderBottom: 'border-primary-color',
-      hoverBG:'hover:bg-extra-color',
-      hoverText:'hover:text-secundary-color'
+      hoverBG:'hover:bg-dark-color',
+      hoverText:'hover:text-light-color'
       },
       family: {
       borderColor: 'border-dark-color',
