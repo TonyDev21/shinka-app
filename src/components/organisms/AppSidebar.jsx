@@ -4,7 +4,7 @@ import {
     FaRegComments, FaUserGraduate, FaBroom   
 } from 'react-icons/fa';
 
-const navItems = [
+const navItems = [ 
   { to: "dashboard", icon: FaHome, label: "Inicio" },
   { to: "mis-cursos", icon: FaBook, label: "Mis Cursos" },
   { to: "mis-rutas", icon: FaBuffer, label: "Mis Rutas" },
@@ -29,7 +29,7 @@ const AppSidebar = ({ isVisible }) => {
               key={to}
               to={to} 
               className="flex items-center px-3 py-4 rounded-lg transition-all duration-300 ease-in-out transform 
-                         hover:bg-theme-primary hover:bg-opacity-10 hover:scale-105"
+                         hover:bg-theme-primary hover:bg-opacity-10 hover:scale-105 hover:text-theme-sidebar"
             >
               <Icon className="w-5 h-5 mr-2" />
               <span>{label}</span>

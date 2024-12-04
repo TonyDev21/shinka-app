@@ -3,7 +3,7 @@ import { useAuth } from "../../context/AuthProvider";
 import { API_URL } from "../../constants/env";
 import { Link, Navigate, useLocation } from "react-router-dom";
 import { useState } from "react";
-import imgLogo from '../../assets/logo_color_white.svg';
+import imgLogo from '../../assets/CodexFlow.svg';
 
 const Login = () => {
 
@@ -108,12 +108,12 @@ const Login = () => {
 
           <p className="text-center mt-6 text-dark-extra">Inicia sesión con:</p>
 
-          <div className="mt-4 text-center">
+          <div className="mt-4 text-center flex flex-col">
             <button
               className="w-full py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
               onClick={() => (window.location.href = 'http://localhost:3000/auth/google')}
-            >
-              Iniciar con Google
+            >           
+              Continuar con Google   
             </button>
           </div>
         </div>
