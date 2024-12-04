@@ -19,10 +19,10 @@ const Banner = () => {
       {/* Contenedor del contenido */}
       <div className="relative z-10 text-center max-w-[800px] p-12 bg-black bg-opacity-80 rounded-lg">
         <h1 className="font-montserrat font-bold text-light-color mb-8 text-5xl">
-          LogicCraft
+          CodexFlow
         </h1>
         <p className="font-montserrat text-light-color text-xl mb-8">
-          ¡Bienvenido a LogicCraft! Aquí te guiaremos desde lo más básico hasta
+          ¡Bienvenido a CodexFlow! Aquí te guiaremos desde lo más básico hasta
           lo avanzado, ayudándote a dominar el arte de la programación desde
           cero. No necesitas experiencia previa, solo la curiosidad de explorar
           el mundo del código.

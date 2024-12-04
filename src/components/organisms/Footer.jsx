@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
             {/* Copyright */}
             <div className="text-center pb-2 sm:pb-0">
-            <p>&copy; Copyright Academia LogicCraft 2024</p>
+            <p>&copy; Copyright Academia CodexFlow 2024</p>
             </div>
             {/* Política */}
             <div className="text-center pb-2 sm:pb-0">

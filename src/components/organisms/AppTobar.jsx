@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import guimarLogo from '../../assets/logo_sin_fondo.svg';
+import codexLogo from '../../assets/CodexFlow.svg';
 import { FaBars, FaEllipsisV,FaShoppingCart } from 'react-icons/fa';
 import { CartContext } from '../../context/CartContext';
 
@@ -26,11 +26,11 @@ const AppTopbar = ({ onToggleSidebar }) => {
             {/* Logo */}
             <Link to="/" className="flex items-center text-surface-900 text-xl font-bold w-72 rounded-lg sm:mx-0 mx-auto order-2 sm:order-1 flex-grow sm:flex-grow-0 justify-center">
                 <img
-                    src={guimarLogo}    
+                    src={codexLogo}    
                     className="w-12 h-20 mr-2"
                      alt="logo"
                 />
-                <span>LogicCraft</span>
+                <span>CodexFlow</span>
             </Link>
 
             {/* Ellipsis Button (Visible only on small screens) */}
@@ -50,7 +50,7 @@ const AppTopbar = ({ onToggleSidebar }) => {
                 <Link to="/" className="font-normal text-text-color hover:text-btn-color-primary transition duration-200 flex items-center">
                     <FaShoppingCart className="mr-1" /> <span>({state.cart.length})</span>
                 </Link>
-                <Link to="/" className="inline-flex justify-center items-center cursor-pointer hover:bg-surface-hover hover:text-text-color transition-colors">
+                <Link to="/perfil" className="inline-flex justify-center items-center cursor-pointer hover:bg-surface-hover hover:text-text-color transition-colors">
                        Perfil  
                 </Link>
             </div>

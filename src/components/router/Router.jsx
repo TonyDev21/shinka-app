@@ -15,6 +15,7 @@ import Rutas from "../pages/auth/Rutas"
 import Progreso from "../pages/auth/Progreso"
 import Chat from "../pages/auth/Chat"
 import Beca from "../pages/auth/Beca"
+import Perfil from "../pages/auth/Perfil"
 
 const router = createBrowserRouter([
     {
@@ -79,13 +80,17 @@ const router = createBrowserRouter([
                 element: <Tematica/>
             },
             {
-                path: "beca",
+                path: "becas",
                 element: <Beca/>
             },
             {
               path: "tematica",
               element: <Tematica/>
             },
+            {
+              path:"perfil",
+              element:<Perfil/>
+            }
           ]
         }
       ]

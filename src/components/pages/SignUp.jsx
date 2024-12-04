@@ -16,7 +16,7 @@ const SignUp = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-
+  
     try {
       const response = await fetch(`${API_URL}/signup`, {
         method: "POST",
@@ -31,15 +31,20 @@ const SignUp = () => {
           password,  
         }),
       });
-
+  
+      const data = await response.json();
+  
       if (response.ok) {
         console.log("User created successfully");
         goTo("/login");
       } else {
-        console.log("Something went wrong");
+        console.error("Error:", data.error || "Unknown error occurred");
+        // You might want to show this error to the user
+        alert(data.error || "An error occurred during registration");
       }
     } catch (error) {
-      console.log("Fetch error:", error);
+      console.error("Fetch error:", error);
+      alert("An error occurred during registration");
     }
   }
 
@@ -79,6 +84,26 @@ const SignUp = () => {
               />
             </div>
 
+            {/* Lastname */}
+            <div className="mb-4">
+              <label
+                htmlFor="confirmPassword"
+                className="block text-sm font-medium"
+              >
+                Apellidos
+              </label>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="Ingresa tu apellido"
+                required
+                className="w-full p-3 mt-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-color"
+                value={lastname}
+                onChange={(e) => setLastname(e.target.value)}
+              />
+            </div>
+
             {/* Correo Electrónico */}
             <div className="mb-4">
               <label htmlFor="email" className="block text-sm font-medium">
@@ -113,25 +138,7 @@ const SignUp = () => {
               />
             </div>
 
-            {/* Confirmar Contraseña */}
-            <div className="mb-4">
-              <label
-                htmlFor="confirmPassword"
-                className="block text-sm font-medium"
-              >
-                Confirmar Apellido
-              </label>
-              <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                placeholder="Confirma tu contraseña"
-                required
-                className="w-full p-3 mt-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-color"
-                value={lastname}
-                onChange={(e) => setLastname(e.target.value)}
-              />
-            </div>
+            
 
             {/* Fecha de Nacimiento */}
             <div className="mb-4">

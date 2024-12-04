@@ -52,7 +52,7 @@ const Login = () => {
         {/* Imagen Sección */}
         <div className="hidden sm:flex flex-col justify-center items-center flex-1 text-center mb-6 ">
           <img src={imgLogo} alt="Logo"className="mx-auto mb-2 w-32 h-32"/>
-          <h2 className="text-3xl font-bold text-cyan-200">LogicCraft</h2>
+          <h2 className="text-3xl font-bold text-cyan-200">CodexFlow</h2>
         </div>
 
         {/* Formulario Sección */}
