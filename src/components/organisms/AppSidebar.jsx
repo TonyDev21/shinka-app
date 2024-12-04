@@ -9,9 +9,9 @@ const navItems = [
   { to: "mis-cursos", icon: FaBook, label: "Mis Cursos" },
   { to: "mis-rutas", icon: FaBuffer, label: "Mis Rutas" },
   { to: "mi-progreso", icon: FaChartBar, label: "Mi Progreso" },
-  { to: "chat", icon: FaRegComments, label: "LogicChat" },
+  { to: "chat", icon: FaRegComments, label: "ChatFlow" },
   { to: "tematicas", icon: FaBroom, label: "Tematicas" },
-  { to: "beca", icon: FaUserGraduate, label: "Beca" },
+  { to: "becas", icon: FaUserGraduate, label: "Beca" },
 ];
 
 const AppSidebar = ({ isVisible }) => {
