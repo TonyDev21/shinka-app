@@ -8,7 +8,7 @@ export default {
         number: ['"Lato"', "sans-serif"],
       },
       colors: {
-        "primary-color": "#44d62c",
+        "primary-color": "#0FC4F2",
         "secundary-color": "#000000",
         "dark-color": "#111111",
         "dark-light": "#252525",
@@ -41,7 +41,7 @@ export default {
         ":root, .theme01": {
           "--background": "#ffffff", 
           "--text": "#2d3748", 
-          "--primary": "#f6e05e", 
+          "--primary": "#0FC4F2", 
           "--secondary": "#63b3ed", 
           "--accent": "#f97316", 
           "--sidebar-bg": "#ffffff", 
