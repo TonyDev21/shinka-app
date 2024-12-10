@@ -29,7 +29,7 @@ export default {
         "banner-curso":
           "url('https://github.com/Eduardoaguic/fondos.idk/blob/main/kyrby.gif?raw=true')",
         "banner-beca":
-          "url('https://res.cloudinary.com/dxnx6awui/image/upload/v1732879201/2pWQ6Ow6dNYGyA11WGCSfkPXdxy_e8mom6.svg')",
+          "url('https://res.cloudinary.com/dxnx6awui/image/upload/v1728301083/vlzoggbev4dgzvrpjpzu.jpg')",
         "banner-js":
           "url('https://res.cloudinary.com/dxnx6awui/image/upload/v1730265388/bannerJS_suetv9.svg')",
       },
