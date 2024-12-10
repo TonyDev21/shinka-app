@@ -58,8 +58,8 @@ const MainHeader = ({ Children }) => {
   return (
     <>
       <header
-        className={`bg-secundary-color border-b-2 border-primary-color z-50 transition-all duration-300 ease-in-out fixed top-0 left-0 w-full ${
-          showNavbar ? 'opacity-100' : 'opacity-0'
+        className={`bg-secundary-color border-b-2 border-primary-color z-50 transition-transform duration-300 ease-in-out fixed top-0 left-0 w-full ${
+          showNavbar ? 'transform-none' : '-translate-y-full'
         }`}
       >
         <nav className="container mx-auto flex justify-around sm:justify-between items-center">
