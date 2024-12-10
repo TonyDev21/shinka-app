@@ -9,6 +9,7 @@ const Banner = () => {
         autoPlay
         muted
         loop
+        playsInline // Asegura que el video se reproduce en dispositivos móviles sin controles
       >
         <source
           src="https://res.cloudinary.com/dxnx6awui/video/upload/v1732863847/7534244-hd_1920_1080_25fps_wtghjb.mp4"

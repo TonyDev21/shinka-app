@@ -58,8 +58,10 @@ const MainHeader = ({ Children }) => {
   return (
     <>
       <header
-        className={`bg-secundary-color border-b-2 border-primary-color z-50 transition-transform duration-300 ease-in-out fixed top-0 left-0 w-full ${
+        className={`bg-secundary-color border-b-2 border-primary-color z-50 fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out ${
           showNavbar ? 'transform-none' : '-translate-y-full'
+        } ${
+          window.innerWidth <= 1024 ? 'transform-none' : '' // AQUÍ EVITAMOS QUE SE OCUPE EL `transform` EN PANTALLAS PEQUEÑAS
         }`}
       >
         <nav className="container mx-auto flex justify-around sm:justify-between items-center">
