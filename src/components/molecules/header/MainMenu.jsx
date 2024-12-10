@@ -3,21 +3,26 @@ import BurgerButton from "../../atoms/BurgerButtom";
 
 const MainMenu = ({ isMenuOpen, toggleMenu }) => {
 
-  {/* Cierra el BurgerMenu */}
   const handleLinkClick = () => {
-    toggleMenu();
+    toggleMenu(); // Cierra el menú cuando se hace clic en cualquier enlace
   };
 
   return (
     <nav className="z-50">
-
+      {/* Botón burger para abrir/cerrar el menú */}
       <BurgerButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
 
       <ul
-        className={`lg:flex lg:flex-grow-0 gap-x-4 text-2xl lg:justify-center lg:items-center absolute lg:relative lg:top-0 top-20
-          left-0 bg-secundary-color w-full h-screen lg:h-auto lg:w-auto py-14 lg:py-0 px-8 text-center lg:text-left transition-all duration-300 ease-in-out
-          ${isMenuOpen ? "block" : "hidden"}`}
+        className={`lg:flex lg:flex-row lg:justify-center lg:items-center gap-x-4 text-2xl absolute top-0 left-0 bg-secundary-color w-full
+        ${isMenuOpen ? "block h-screen" : "hidden"} lg:h-auto lg:w-auto lg:static py-14 lg:py-0 px-8 text-center lg:text-left transition-all duration-300 ease-in-out`}
       >
+        {/* El icono para cerrar el menú (en la parte superior derecha) */}
+        <div className="absolute top-4 right-20 lg:hidden">
+          <button onClick={toggleMenu} className="text-white">
+            X
+          </button>
+        </div>
+
         <li className="mb-7 lg:mb-0">
           <Link
             to="/"
@@ -39,7 +44,7 @@ const MainMenu = ({ isMenuOpen, toggleMenu }) => {
         <li className="mb-7 lg:mb-0">
           <Link
             to="/planes"
-            className="font-montserrat text-lg  text-white hover:text-primary-color transition duration-200"
+            className="font-montserrat text-lg text-white hover:text-primary-color transition duration-200"
             onClick={handleLinkClick}
           >
             Planes
